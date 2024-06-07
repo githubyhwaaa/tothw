@@ -30,6 +30,7 @@ public interface Usermapper {
     @Update("UPDATE columns SET liked=#{liked} WHERE id=#{id};")
     public int updatabylike(int liked, int id);
     @Insert("INSERT INTO tb_user VALUES (null,#{wzuser},#{username})")
+
     public int updateattention(String wzuser,String username);
     @Delete("DELETE FROM tb_user WHERE username=#{wzuser} AND followusername=#{username}")
     public int delectattention(String wzuser,String username);
