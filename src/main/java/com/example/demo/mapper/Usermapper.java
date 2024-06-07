@@ -33,6 +33,7 @@ public interface Usermapper {
 
     public int updateattention(String wzuser,String username);
     @Delete("DELETE FROM tb_user WHERE username=#{wzuser} AND followusername=#{username}")
+
     public int delectattention(String wzuser,String username);
     @Select("SELECT * FROM tb_user WHERE username=#{user_id} AND followusername=#{followuser_id}")
     public tb_user selectbyattention(String user_id,String followuser_id);
